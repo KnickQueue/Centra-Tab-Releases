@@ -19,6 +19,8 @@ Clipboard text and images are encrypted before being saved or shared. Credential
 
 Use **All machines** to select several computers together. Enable **Hide duplicates** to show repeated text or images once within that view. The app shows the latest matching capture, its copy count and source machines. It compares text with consistent line endings and images by their decoded pixels. All captures stay stored; pin/delete affect the displayed capture. Your view preferences are remembered.
 
+Scroll with your mouse wheel or touchpad. Refreshes and incoming captures keep your reading position; arrow keys keep the selected entry in view.
+
 ## History cache and replayed copies
 
 Open **History cache** to choose 1–3650 days for this computer (default 7). Disable **Keep pinned items** if pinned copies should expire too. Shortening the period removes older local copies immediately; it does not delete history on other computers. The central server has its own retention policy, set through RETENTION_DAYS in its Docker Compose file.
