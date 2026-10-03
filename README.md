@@ -31,6 +31,12 @@ Open **History cache** to choose 1–3650 days for this computer (default 7). Di
 
 The app checks this public GitHub release feed automatically and downloads signed updates without a GitHub account. Choose **Updates → Restart & update** to install. Windows updates through its installer; macOS updates the installed app in a writable Applications folder; Linux supports in-app updates for writable AppImages. Debian installs use the package manager. Release metadata is Ed25519 signed and installers are checked against their signed SHA-512 hashes. Your workspace token and key are never sent to GitHub.
 
+## Android preview
+
+Download the signed APK from the [Android preview release](https://github.com/KnickQueue/Centra-Tab-Releases/releases/tag/android-v0.1.0). Android 11+ is supported. Connect Tailscale on your phone, then enter your own tailnet name and a connected computer's full Tailscale hostname in the guided setup. The computer supplies your existing server connection through encrypted pairing; approve the phone on that computer if approval is enabled. Manual central-server setup and protected connection files are also available.
+
+The phone uses Android Keystore for saved credentials and shares encrypted text and PNG history with desktop members. Use Capture clipboard while the app is open, enable optional capture while focused, or Share text/images to Centra Tab from other apps. Android restricts background clipboard reads; this preview captures and syncs while open. Touch scrolling, several-machine checkboxes, duplicate grouping, cache retention, pins, and copy suppression are included. Settings can check signed APK updates; Android confirms the installation. Android preview releases use a separate update channel and do not replace the desktop stable release.
+
 ## Preview limitations
 
 This is a working preview: Windows installers do not yet have an Authenticode certificate, and macOS builds are ad-hoc signed, without Apple notarization. Apple Silicon, Windows x64 and Linux x64 are the initial targets. Linux clipboard access depends on the desktop/compositor. If your Linux system lacks libfuse2, run the AppImage with APPIMAGE_EXTRACT_AND_RUN=1, or use the Debian package on a compatible distribution.
