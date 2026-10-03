@@ -15,6 +15,10 @@ Download the installer for your computer from [Releases](https://github.com/Knic
 
 Clipboard text and images are encrypted before being saved or shared. Credentials use the operating system's credential store when available. Keep a recovery connection file and its password separately.
 
+## Remote desktop and repeated copies
+
+Use **All machines** to select several computers together. Enable **Hide duplicates** to show repeated text or images once within that view. The app shows the latest matching capture, its copy count and source machines. It compares text with consistent line endings and images by their decoded pixels. All captures stay stored; pin/delete affect the displayed capture. Your view preferences are remembered.
+
 ## Updates
 
 The app checks this public GitHub release feed automatically and downloads signed updates without a GitHub account. Choose **Updates → Restart & update** to install. Windows updates through its installer; macOS updates the installed app in a writable Applications folder; Linux supports in-app updates for writable AppImages. Debian installs use the package manager. Release metadata is Ed25519 signed and installers are checked against their signed SHA-512 hashes. Your workspace token and key are never sent to GitHub.
