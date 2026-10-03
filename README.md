@@ -19,7 +19,13 @@ Clipboard text and images are encrypted before being saved or shared. Credential
 
 Use **All machines** to select several computers together. Enable **Hide duplicates** to show repeated text or images once within that view. The app shows the latest matching capture, its copy count and source machines. It compares text with consistent line endings and images by their decoded pixels. All captures stay stored; pin/delete affect the displayed capture. Your view preferences are remembered.
 
-## Updates
+## History cache and replayed copies
+
+Open **History cache** to choose 1–3650 days for this computer (default 7). Disable **Keep pinned items** if pinned copies should expire too. Shortening the period removes older local copies immediately; it does not delete history on other computers. The central server has its own retention policy, set through RETENTION_DAYS in its Docker Compose file.
+
+**Copy to clipboard** reuses a saved item without capturing it again. Replay markers, content normalization, and authenticated notices to connected app instances suppress immediate remote-desktop echoes. Update both ends to 0.6.0 or later for this protection when the remote software strips clipboard markers. Peers that miss the notice or very delayed echoes may still create a copy; Hide duplicates remains available.
+
+## App updates
 
 The app checks this public GitHub release feed automatically and downloads signed updates without a GitHub account. Choose **Updates → Restart & update** to install. Windows updates through its installer; macOS updates the installed app in a writable Applications folder; Linux supports in-app updates for writable AppImages. Debian installs use the package manager. Release metadata is Ed25519 signed and installers are checked against their signed SHA-512 hashes. Your workspace token and key are never sent to GitHub.
 
