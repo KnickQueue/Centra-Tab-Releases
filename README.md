@@ -43,6 +43,6 @@ The phone uses Android Keystore for saved credentials and shares encrypted text 
 
 ## Preview limitations
 
-This is a working preview: Windows installers do not yet have an Authenticode certificate, and macOS builds are ad-hoc signed, without Apple notarization. Apple Silicon, Windows x64 and Linux x64 are the initial targets. Linux clipboard access depends on the desktop/compositor. If your Linux system lacks libfuse2, run the AppImage with APPIMAGE_EXTRACT_AND_RUN=1, or use the Debian package on a compatible distribution.
+This is a working preview: Windows installers do not yet have an Authenticode certificate, and macOS builds are not notarized. Mac releases before 0.8.2 use ad-hoc signing; later preview builds use a stable Apple Development signing identity. Switching to it needs initial Keychain approval. Apple Silicon, Windows x64 and Linux x64 are the initial targets. Linux clipboard access depends on the desktop/compositor. If your Linux system lacks libfuse2, run the AppImage with APPIMAGE_EXTRACT_AND_RUN=1, or use the Debian package on a compatible distribution.
 
 This repository holds installers, signed update metadata and this guide. Development source remains in a separate private repository. Each household/team runs its own Tailscale network and server; this project does not provide a shared hosted clipboard service.
